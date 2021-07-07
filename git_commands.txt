@@ -1,0 +1,127 @@
+# ------------ $ sign represent a command while using command on terminal ignore '$' sign ----------------
+
+# --------- Configuration set your username and email id -----------
+
+$ git config --global user.name "Shamsoddin"
+
+$ git config --global user.email "shamsoddin.21@gmail.com"
+
+
+
+# ---------  Check created username and email id -----------
+
+$ git config --global user.name
+
+$ git config --global user.email 
+
+
+
+
+#------------  Creating new branch: syntax ---------------
+git checkout -b <branch-name>
+
+$ git checkout -b samir
+
+
+
+e.g I have two branches : 1) master and 2) samir
+
+# ---------- To check or display branches: --------
+$ git branch
+
+
+
+# ----------  Switching branches master to samir.
+
+$ git checkout samir
+
+# ----------  Switching branches  samir to master.
+
+$ git checkout master
+
+
+
+# ------------ Creating git repository ----------------
+
+$ git init
+
+# ------------ Removing git repository. this will delete .git hidden folder -----------------
+
+$ rm -rf .git
+
+
+
+# -------- Move untrack file into staging area (all files) ----------------
+
+$ git add --a 
+or 
+$ git add .
+
+# --------- Add specific file into staging area --------------
+
+$ git add <file-name>
+
+$ git add hello.js
+
+
+
+# --------------- To check the status of file like changes in the file or untrack , deleted , and modiified file ---------
+
+$ git status
+
+
+
+# ---------  Save changes permanantly on disk. you can cammit anything ---------------
+
+$ git commit -m "saved the files"  
+
+
+
+# --------- skip staging area or directly commit the file ------------
+
+$ git commit -a -m "skiping staging area"
+
+
+
+# ---------- Restore changes as it is. it's not work if your file in staging area or commited. --------------
+
+$ git restore <file-name>
+
+
+
+# ---------- Merging one branch changes into another branch -------------
+- Description :
+# e.g I have two branches 1.master and 2.samir. working on same project created two branches you don't want to change your master branch. what you can do is? you can create different branch like samir .where you can do changes. after that those changes you want to add into your master branch same chenges will reflect to master branch as well.
+make sure you are in master branch before merging samir branch and you did the commit as well.
+# current branch is 'master' merging data from 'samir' to 'master' branch
+
+
+$ git merge samir
+
+
+
+# ------------- Push file into your github account ---------------
+
+$ git remote
+
+
+1) to check where you from doing push and fetch.provide a link.
+i have create 'cypress-updates' repository.git its showing path of tha t repository.
+
+$ git remote -v
+
+# result of above command
+origin	https://github.com/shamsoddin-mujawar/cypress-updates.git (fetch)
+origin	https://github.com/shamsoddin-mujawar/cypress-updates.git (push)
+
+2) copy your created git repository link from github account.
+
+$ git remote add origin https://github.com/shamsoddin-mujawar/Cypress-Updates.git
+
+3) push the file on github with your branch. 
+
+$ git push -u origin samir   # 'samir' branch name.
+
+
+
+
