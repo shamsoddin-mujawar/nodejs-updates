@@ -68,4 +68,4 @@ console.log(family)
 
 // new code writing here
 
-console.log("checking checking github repository")
+console.log("checking github repository")
