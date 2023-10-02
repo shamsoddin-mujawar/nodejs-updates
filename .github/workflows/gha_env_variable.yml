@@ -1,0 +1,14 @@
+name: GHA_env_variable
+on: workflow_dispatch
+jobs:
+  env_variable:
+    environment: test
+    env:
+      USERNAME: ${{secrets.USERNAME}}
+      PASSWORD: ${{secrets.PASSWORD}}
+    runs-on: ubuntu-latest
+    steps:
+      - name: print env variable
+        run : |
+          echo "GHA env username is - $USERNAME
+          echo "GHA env password is - $PASSWORD
