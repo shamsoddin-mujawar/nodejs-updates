@@ -18,3 +18,12 @@ jobs:
     steps:
       - name: print env var
         run: echo "Environment variable is - ${{vars.PORT}}"
+
+  set_env_variable:
+    runs-on: ubuntu-latest
+    steps:
+      - name: set env var
+        run: echo "NAME=sham...!" >> $GITHUB_ENV
+
+      - name: access env var
+        run: echo "Env varible value is - $NAME"
