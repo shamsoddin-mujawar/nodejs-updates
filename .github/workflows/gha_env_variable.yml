@@ -14,9 +14,7 @@ jobs:
           echo "GHA env password is - $PASSWORD
 
   evn_variable:
-    env:
-      PORT: ${{vars.PORT}}
     runs-on: ubuntu-latest
     steps:
       - name: print env var
-        run: echo "Environment variable is - $PORT"
+        run: echo "Environment variable is - ${{vars.PORT}}"
