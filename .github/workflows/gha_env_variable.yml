@@ -15,7 +15,7 @@ jobs:
 
   evn_variable:
     env:
-      PORT: ${{env.PORT}}
+      PORT: ${{vars.PORT}}
     runs-on: ubuntu-latest
     steps:
       - name: print env var
